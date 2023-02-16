@@ -1,0 +1,51 @@
+body{
+	height: 100vh;
+	background-color: #1B1464;	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.spinner{
+	width: 300px;
+	height: 300px;
+	position: relative;
+}
+.spinner .circle{
+	border-radius: 50%;
+	border: 5px solid transparent;
+	border-top-color: #9980FA;
+	position: absolute;
+	animation: rotate 1s linear infinite;
+}
+.spinner .circle.one{
+	width: 50px;
+	height: 50px;
+	left:36%;
+	top: 36%;
+	z-index: 2;
+	animation-duration: .5s;
+
+}
+.spinner .circle.two{
+	width: 75px;
+	height: 75px;
+	left: 32%;
+	top: 32%;
+	z-index: 1;
+	animation-duration: 1s;
+}
+.spinner .circle.three{
+	width: 100px;
+	height: 100px;
+	left: 27.5%;
+	top: 27.5%;
+	animation-duration: 1.5s;
+}
+@keyframes rotate{
+	from{
+		transform: rotate(0);
+	}
+	to{
+		transform: rotate(360deg);
+	}
+}
